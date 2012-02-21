@@ -1,0 +1,25 @@
+Singkat - Django App for URL Shortener
+
+Requirement:
+- Django
+
+Setting up the project:
+- create new django project
+- put django-singkat into your project folder
+- edit settings.py (see settings.py.example)
+- edit urls.py (see urls.py.example)
+- run `python manage.py syncdb` from terminal / command prompt
+
+Running the project:
+- run `python manage.py runserver` from terminal / command prompt
+
+Issue:
+- make sure that you rename 'django-singkat' folder into alphanumeric characters folder name (for example, rename it into 'djangosingkat')
+
+To do:
+- use hash function to generate url alias instead of random characters function
+- create api
+
+Contact me:
+fitra@di.blankon.in
+fitra@g.pl

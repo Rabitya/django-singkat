@@ -1,0 +1,73 @@
+/* Form styles */
+
+h4 {
+    line-height: 1px;
+}
+
+form legend {
+    margin-bottom: 1em;
+    color: #0000FF;
+    font-weight: bold;
+}
+
+p.errors {
+    color: #C00;
+    font-style: normal;
+    display: inline;
+}
+
+p.note {
+    margin: auto;
+    font-size: 90%;
+    color: #333;
+    text-align: center;
+}
+
+form fieldset {
+    margin: 5px 0;
+    padding: 5px;
+    border: #DDD 1px solid;
+}
+
+label {
+    margin-top: 3px;
+    margin-right: 10px;
+    padding-right: 10px;
+    width: 150px;
+    display: block;
+    float: left;
+    text-align: right;
+    position: relative;
+}
+
+label.error {
+    color: #C00;
+}
+
+input.error {
+    border-color: #C00;
+    background-color: #FEF;
+}
+
+input:focus, input.error:focus, textarea:focus {
+    background-color: #FFC;
+    border-color: #FC6;
+}
+
+.buttonrow {
+    margin-left: 180px;
+}
+
+.done {
+    margin: 0 0 10px 0;
+    padding: 5px 10px;
+    border: #FC6 1px solid;
+    background-color: #FFC;
+}
+
+.done p {
+    margin: 0;
+    color: #C00;
+    font-style: normal;
+    font-weight: bold;
+}

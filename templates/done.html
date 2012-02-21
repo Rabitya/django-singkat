@@ -1,0 +1,20 @@
+{% load i18n %}
+
+<!doctype html>
+<html lang="en-us" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Singkat - URL Shortener</title>
+    <link href="/media/css/form.css" media="screen" rel="stylesheet"/>
+</head>
+
+<body>
+    <h1>Singkat - URL Shortener</h1>
+    <div class="done">
+        <p>Done! Your short URL is <a href="{{ app_url }}{{ alias }}">{{ app_url }}{{ alias }}</a></p>
+    </div>
+    <p class="note">Iseng by <a href="http://fitraditya.wordpress.com/">Rabitya</a> | Powered by <a href="http://djangoframework.com>">Django</a></p>
+</body>
+
+</html>

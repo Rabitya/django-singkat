@@ -1,0 +1,15 @@
+from django.conf import settings
+from django.conf.urls.defaults import patterns, include, url
+from django.contrib import admin
+
+# Change it into your app name
+from djangosingkat.views import index, createnew
+
+admin.autodiscover()
+
+urlpatterns = patterns('',
+    url(r'^$', 'djangosingkat.views.index'),
+    url(r'^createnew/', 'djangosingkat.views.createnew'),
+    url(r'^media/(?P<path>.*)', 'djangosingkat.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    url(r'^(?P<alias>[a-zA-z1-9]+)/$', 'djangosingkat.views.goto'),
+)

@@ -1,0 +1,45 @@
+{% load i18n %}
+
+<!doctype html>
+<html lang="en-us" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Singkat - URL Shortener</title>
+    <link href="/media/css/form.css" media="screen" rel="stylesheet"/>
+</head>
+
+<body>
+    <h1>Singkat - URL Shortener</h1>
+    <form action="{{ request.path_info }}" method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>{% trans "Create your short URL" %}</legend>
+            <div>
+                {% if form.pranala.errors %}
+                    <label for="pranala" class="error">URL</label>
+                    <font color="#C00">http://</font><input type="text" class="error" id="id-pranala" name="pranala" size="40" required /><p class="errors">{{ form.pranala.errors|join:"; " }}</p>
+                {% else %}
+                    <label for="pranala">URL</label>
+                    http://<input type="text" id="id-pranala" name="pranala" size="40" required />
+                {% endif %}
+            </div>
+            <div>
+                {% if form.alias.errors %}
+                    <label for="alias" class="error">Alias</label>
+                    <font color="#C00">{{ app_url }}</font><input type="text" class="error" id="id-alias" name="alias" size="28" value="{{ newalias }}" required /><p class="errors">{{ form.alias.errors|join:"; " }}</p>
+                {% else %}
+                    <label for="pranala">Alias</label>
+                    {{ app_url }}<input type="text" id="id-alias" name="alias" size="28"  value="{{ newalias }}" required />
+                {% endif %}
+
+            </div>
+        </fieldset>
+        <div class="buttonrow">
+            <input type="submit" class="button" value="{% trans 'Create Short URL' %}" />
+        </div>
+    </form>
+    <p class="note">Iseng by <a href="http://fitraditya.wordpress.com/">Rabitya</a> | Powered by <a href="http://djangoframework.com>">Django</a></p>
+</body>
+
+</html>
